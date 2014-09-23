@@ -1,0 +1,38 @@
+#!/bin/bash
+echo -n "Process"
+# all possible extensions for pdf, e.g., pdf or PDF
+for f in *.[Pp][Dd][Ff]; do
+	# progress
+	echo -n "."
+	# original file name
+	origin=$f
+	# output | find 0 font| delete </text> | delete <*> | delete return | replace space with _ | replace \ with _
+	new=`pdftohtml -q -i -l 1 -xml -stdout $f | grep "font=\"0\"" | sed "s/<\/text>//g" | sed "s/<\([^]]*\)>//g" | tr "\n" " " |sed "s/ \+/_/g" | sed "s/\//_/g"`.pdf
+	# avoid some overwritting due to our handling mechanism
+	if [[ ! -f "$new" ]]; then
+		# rename (if same then make numbered backups to avoid overwritting)
+		mv $origin $new 2>/dev/null
+		# if success record
+		if [ "`echo $?`" == "0" ]; then
+			echo "1: $origin --> $new" >> report.txt
+			# if fail then try another way and record in 2.txt
+		else #try find 1 font
+			new=`pdftohtml -q -i -l 1 -xml -stdout $f | grep "font=\"1\"" | sed "s/<\/text>//g" | sed "s/<\([^]]*\)>//g" | tr "\n" " " |sed "s/ \+/_/g" | sed "s/\//_/g"`.pdf
+				# avoid some overwritting due to our handling mechanism
+			if [[ ! -f "$new" ]]; then
+				# rename (if same then make numbered backups to avoid overwritting)
+				mv $origin $new 2>/dev/null
+				# if success record
+				echo "2: $origin --> $new" >> report.txt
+			else
+				# no paper will have the same title, there may be something related to our program, so no change here
+				echo "3: $origin" >> report.txt
+			fi
+		fi
+	else
+		# no paper will have the same title, there may be something related to our program, so no change here
+		echo "3: $origin" >> report.txt
+	fi
+done
+echo -n "Done"
+echo
