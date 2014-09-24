@@ -1,6 +1,6 @@
 # README #
 
-This is a Bash shell script created by Weiwei Fang. It is used to rename the academic paper files in pdf with the paper titles, based on the approach proposed in [SciPlore Xtract: Extracting Titles from Scientific PDF Documents by Analyzing Style Information (Font Size)](http://www.sciplore.org/wp-content/papercite-data/pdf/beel10e.pdf).
+Paperrenamer is a Bash shell script used to rename the academic paper files in pdf with the paper titles, based on the approach proposed in [SciPlore Xtract: Extracting Titles from Scientific PDF Documents by Analyzing Style Information (Font Size)](http://www.sciplore.org/wp-content/papercite-data/pdf/beel10e.pdf).
 
 # System Requirment #
 * Linux system
@@ -421,3 +421,5 @@ _4__3_4__2_.pdf
 
 
 ```
+# Contact #
+[Weiwei Fang](http://bjtu-fangvv.diandian.com/)
