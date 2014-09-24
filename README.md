@@ -19,7 +19,7 @@ You may notice the number at the begining of each line, which means:
 2: title extracted from "font=1"
 3: sorry, we can't rename it
 ```
-As pointed out in the paper "Sciplore Xtract", not all pdf files can't be renamed. Sometimes, you have to rename some of them manually.
+However, not all pdf files can't be renamed according to the titles, as pointed out by the paper [SciPlore Xtract: Extracting Titles from Scientific PDF Documents by Analyzing Style Information (Font Size)](http://www.sciplore.org/wp-content/papercite-data/pdf/beel10e.pdf). Sometimes, you have to rename some of them manually.
 
 # Examples (Dataset: Infocom 2014)#
 **The original files are like the following:**
