@@ -11,12 +11,10 @@ This is a Bash shell script created by Weiwei Fang. It is used to rename the aca
 # How it works #
 Put the script into the folder, use chmod to make it executable (i.e., chmod 755 paperrenamer), and then execute it. After the work is done, check the report.txt for the changes.
 ```
-#!html
 1: xxx.pdf --> yyy.pdf
 ```
 You may notice the number at the begining of each line, which means:
 ```
-#!html
 1: title extracted from "font=0"
 2: title extracted from "font=1"
 3: sorry, we can't rename it
@@ -25,7 +23,6 @@ You may notice the number at the begining of each line, which means:
 # Examples #
 **The original files are like the following:**
 ```
-#!html
 fang@fang:~/testpdf$ ls
 1569792175.pdf  1569805973.pdf  1569808115.pdf  1569809795.pdf  1569810933.pdf
 1569793069.pdf  1569806127.pdf  1569808183.pdf  1569809807.pdf  1569810941.pdf
@@ -94,15 +91,12 @@ fang@fang:~/testpdf$ ls
 ```
 **When the script runs:**
 ```
-#!html
-
 fang@fang:~/testpdf$ ./paperrenamer 
 Process...............................................................................................................................................................................................................................................................................................................................Done
 
 ```
 **The report file**
 ```
-#!html
 1: 1569792175.pdf --> PROMISE:_A_Framework_for_Truthful_and_Profit_Maximizing_Spectrum_Double_Auctions_.pdf
 1: 1569793069.pdf --> Proactive_Fault-Tolerant_Aggregation_Protocol_for_Privacy-Assured_Smart_Metering_.pdf
 1: 1569795681.pdf --> Efficiently_Collecting_Histograms_Over_RFID_Tags_.pdf
