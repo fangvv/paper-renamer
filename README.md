@@ -19,8 +19,9 @@ You may notice the number at the begining of each line, which means:
 2: title extracted from "font=1"
 3: sorry, we can't rename it
 ```
+As pointed out in the paper "Sciplore Xtract", not all pdf files can't be renamed. Sometimes, you have to rename some of them manually.
 
-# Examples #
+# Examples (Dataset: Infocom 2014)#
 **The original files are like the following:**
 ```
 fang@fang:~/testpdf$ ls
